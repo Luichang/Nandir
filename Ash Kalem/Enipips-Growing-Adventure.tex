@@ -31,8 +31,11 @@
 \usepackage{tikz}
 \usepackage[protrusion=true,expansion=true]{microtype}
 \usetikzlibrary{positioning,shapes,shadows,arrows,backgrounds,fit}
-%\usepackage{color}
+
+\usepackage{blindtext}
 %\setlength{\parindent}{0pt}
+
+\definecolor{ultramarine}{RGB}{0,32,96}
 
 \newcommand{\card}[4]{
 	\begin{tikzpicture}[background rectangle/.style = {draw=black, fill=white, rounded corners}, show background rectangle, node distance=0.3cm]
@@ -46,8 +49,8 @@
 		Obtained in Session #2.
 	};
 		\node (Knowledge) [textstyle, below=of Obtained, scale=1.3] {
+			\color{ultramarine}
 			\begin{minipage}[t][3cm]{6cm}
-			%\color{white}
 			\ifthenelse{\equal{#3}{true}}{
 				#4
 			}{
@@ -63,6 +66,6 @@
 \section{Enipip der Große}
 
 
-\card{Enipip}{1}{true}{First Card}
+\card{Enipip}{1}{true}{\blindtext}
 
 \end{document}
