@@ -32,7 +32,6 @@
 \usepackage[protrusion=true,expansion=true]{microtype}
 \usetikzlibrary{positioning,shapes,shadows,arrows,backgrounds,fit}
 
-\usepackage{blindtext}
 %\setlength{\parindent}{0pt}
 
 \definecolor{ultramarine}{RGB}{0,32,96}
@@ -48,24 +47,67 @@
 		%\color{white}
 		Obtained in Session #2.
 	};
-		\node (Knowledge) [textstyle, below=of Obtained, scale=1.3] {
-			\color{ultramarine}
-			\begin{minipage}[t][3cm]{6cm}
-			\ifthenelse{\equal{#3}{true}}{
-				#4
-			}{
-				Content Hidden
-			}
-			\end{minipage}
-		};	
+	\node (Knowledge) [textstyle, below=of Obtained, scale=1.3] {
+		\color{ultramarine}
+		\begin{minipage}[t][3cm]{6cm}
+		\ifthenelse{\equal{#3}{true}}{
+			#4
+		}{
+			Content Hidden
+		}
+		\end{minipage}
+	};	
 	\end{tikzpicture}
 }
 
 \begin{document}
-\tikzstyle{textstyle}=[rectangle, text width=6cm, text badly ragged, scale=0.8]
-\section{Enipip der Große}
-
-
-\card{Enipip}{1}{true}{\blindtext}
-
+	\tikzstyle{textstyle}=[rectangle, text width=6cm, text badly ragged, scale=0.8]
+	\begin{titlepage} % good tital page template, only needs the class X notes part to be changed for each new class
+		
+		\centering
+		\includegraphics[width=1\textwidth]{AshkalemLogo}\par\vspace{1cm}
+		{\scshape\LARGE Ashkalem Abenteuer \par}
+		\vspace{1cm}
+		{\huge\bfseries Die Zu Formende Gruppe \par}
+		\vspace{2cm}
+		{\Large\itshape by Enipip \par}
+		
+		\vfill
+		
+		% Bottom of the page
+		
+	\end{titlepage}
+	
+	\tableofcontents % creats a table of contents, ensured already that it is clickable
+	\newpage % starts the actual document on a new page so there is no weird colision of text and toc
+	
+	\chapter{Backstories}
+	
+	\section{Enipip der Große}
+	[Gnome]\newline[Aufgewachsen bei Menschen]\newline[möchte als ebenwürtig angesehen werden]\newline[Wurde im Waisenhaus von anderen Kindern gehänselt und verschlagen wegen seiner eigenen inneren Magie, wodurch er sich auch selbst etwas hasst]\newline[Hat beim Paladin tryout mit gemacht, hat aber nicht die richtige Magie auf Befehl beschwören]\newline[Hat sich eine General Rüstung aus Stoff nähen lassen, weil er das sein möchte um ein höheren Anblick von anderen zu erlangen]\newline[Als Kind wurde er mal so sehr gehänselt, dass er so wütend wurde, dass Geister seiner vorfahren ihm erschienen]\newline[Weil in Stadt von Paladinen aufgewachsen sieht er Magie, welche nicht von Paladinen kommt als Kezerei, leider auch seine eigene]\newline[Nachdem seine Eltern ihn verlassen hatten, hat ihn ein Paladin gefunden, der ihn ins Waisenhaus gebracht hat, aber ihn von mal zu mal besucht hat und als einziger Enipip nicht gehänselt hatte, wodurch Enipip zu ihm hoch geschaut hat]
+	
+	\chapter{Beschreibung}
+	Intro:
+	3 Sekunden. 3 Sekunden braucht es um sich friedlich in sein Bett zu legen, 3 Sekunden braucht es die Lichter im Zimmer zu löschen, wohl wissend das die Leuchtenden Kristalle an den Wänden der Tularon Miene jegliche Dunkelheit von den fast 500 Einwohnern fernhalten würden.
+	3 Sekunden, 3 Sekunden hat die Dunkelheit gebraucht um nach **Tularon** zu kommen, 3 Sekunden um jeden Mann jede Frau und jedes Kind das sich in sicherheit wähnte zu töten.*
+	
+	Unsere Geschichte beginnt an einem späten Nachmittag im südwesten der **Wornostberge**. Dort eingebettet in Grüne Tannen liegt die kleine Zwergenmiene Tularon. Noch vor 2 Tagen ein anlaufplatz für Händler die in der **Geistergrasssteppe** Handel treiben wollten ist sie heute ein lebendiges Grab.
+	Und so beginnt unsere geschichte nicht mit einer Taverne voller gutgelaunter Bauern und Abenteurern die sich am ende ihres langen Tages ein Bier gönnen, sie beginnt nicht mit einem alten Mann in einer Ecke der den Abenteurern eine Quest anbietet die sie schwerlich ablehnen können.
+	Nein unsere geschichte beginnt mit dem Gestank der Verwesung, sie beginnt mit dem dumpfen Umph mit dem Leichen auf Karren geladen werden, sie beginnt mit einem Onkel der Rache will, Rache für einen feigenn Angriff auf die Miene seines Neffen und Rache für alle Zwerge die letzte Nacht gestorben sind. Und so wendet sich dieser Onkel an euch, die fähigsten Abenteurer der Umgebung um die Schuldigen zu stellen und dafür zu sorgen das sich was auch immer hier geschehen ist niemals wiederholt.
+	-----------------------------------------------------------------------
+	Tularon:
+	Der Quadratische Raum ist stickig und der Rauch der Fackeln die Trotz des Warmenkristalllichts aufgestellt wurden helfen auch nicht gerade. Die Wände sind bedeckt von Lageplänen die Kristallvorkommen und Metallvenen zeigen, auf dem großen Tisch vor dem ihr euch findet steht ein kleines Modell eines Förderkrans. Auf der Anderen seite des Tisches steht ein alter Zwerg dessen Haare von seinem Kopf zu seinem Kinn gewandert schienen. Er ist in Eine Feine Rüstung gekleidert, mehr Repäsentativ als Praktisch und raucht eine Pfeife. Der Zorn steht ihm ins Gesicht geschrieben:
+	"Ich will das ihr diese Bastarde findet die das getan haben findet sie und hängt sie an ihren eigenen Gedärmen auf!!!"
+	-----------------------------------------------------------------------
+	Der Temerin
+	Vor euren Augen weitet sich der Wald und ihr seht ein verladedock jenseits dessen sich ein Fluss erstreckt der sich vor Vergleichen mit dem Nil nicht zu scheuen braucht: der Temerin.
+	Besonders Fällt euch sein Wasser auf das eine bläulich grüne Farbe hat und leicht zu leuchten scheint durch die Pollen des Geistergraßes dier auf seinem Weg durch die Steppe aufsammelt
+	Die Capricorn
+	Das Schiff sieht aus als hätte es schon bessere Tage erlebt. Große Flicken zieren ihr Segel und sein Rumpf schien aus allen möglichen Holzarten zusammengebastelt zu sein.
+	An Deck steht ein alter Halbling mit großem Schnauzer der gerade 2 jüngere Halblinge herumkommandiert die den rest der Crew auszumachen scheinen
+	----------------------------------------------------------------------
+	Milbach:
+	Nach der langen Fahrt lasst ihr die Geistergraßsteppe hinter euch und eine halbe stunde später seht ihr an einer Flussbiegung die Stadt Milbach deren Häuser sich an den Temerien Schmiegen. Doch von den Fachwerkhäusern steigt Rauch auf ein Viertel im Hafennähe steht lichterloh in Flammen Leute rennen mit Eimern in der Hand zum Fluss um den brand zu löschen. Auch jenseitz der Stadt sieht man lange schneisen verbrannten Graßes, wie als währe ein Rises mit einem Flammwerfer durch die Stadt gezogen.
+	Der Capitän beschattet seine Augen mit seiner Hand und murmelt:"Drachenfeuer...." (Session Ende)
+	
 \end{document}
