@@ -1,4 +1,0 @@
-\select@language {ngerman}
-\contentsline {chapter}{\numberline {}Backstories}{3}{chapter.1}
-\contentsline {section}{\numberline {}Enipip der Gro\IeC {\ss }e}{3}{section.1.1}
-\contentsline {chapter}{\numberline {}Beschreibung}{4}{chapter.2}
