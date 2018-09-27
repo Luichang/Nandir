@@ -1,0 +1,122 @@
+\documentclass[10pt,twoside,twocolumn,openany]{book}
+
+% The following packages were required to make the dnd.sty work
+\usepackage[table]{xcolor}
+\usepackage{tikz}
+\usepackage{everyshi}
+\usepackage{keycommand}
+\usepackage{fancyhdr}
+\usepackage[most]{tcolorbox}
+\usepackage{environ}
+\usepackage{trimspaces}
+\usepackage{fp}
+\usepackage[pages=all]{background}
+\usepackage{everypage}
+\usepackage{listings}
+
+\usepackage[bg-letter]{dnd} % Options: bg-a4, bg-letter, bg-full, bg-print, bg-none.
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} % this way umlaute are included from the get go
+\usepackage[ngerman]{babel} % german spell check
+\usepackage{lmodern}
+
+\usepackage{graphicx}
+
+\usepackage{datetime}
+\usepackage{amssymb}
+
+\usepackage{hyperref} % these two lines are so that the table of content is clickable
+\hypersetup{linktoc=all}
+\usepackage{tikz}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usetikzlibrary{positioning,shapes,shadows,arrows,backgrounds,fit}
+
+%\setlength{\parindent}{0pt}
+
+\definecolor{ultramarine}{RGB}{0,32,96}
+
+\newcommand{\card}[4]{
+	\begin{tikzpicture}[background rectangle/.style = {draw=black, fill=white, rounded corners}, show background rectangle, node distance=0.3cm]
+	
+	\node (Posessor) [textstyle, align=center, scale=1.5] {
+		%\color{white}
+		\large$\mathfrak{#1}$
+	};
+	\node (Obtained) [textstyle, below=of Posessor] {
+		%\color{white}
+		Obtained in Session #2.
+	};
+	\node (Knowledge) [textstyle, below=of Obtained, scale=1.3] {
+		\color{ultramarine}
+		\begin{minipage}[t][3cm]{6cm}
+		\ifthenelse{\equal{#3}{true}}{
+			#4
+		}{
+			Content Hidden
+		}
+		\end{minipage}
+	};	
+	\end{tikzpicture}
+}
+
+\begin{document}
+	\tikzstyle{textstyle}=[rectangle, text width=6cm, text badly ragged, scale=0.8]
+	\begin{titlepage} % good tital page template, only needs the class X notes part to be changed for each new class
+		
+		\centering
+		\includegraphics[width=1\textwidth]{AshkalemLogo}\par\vspace{1cm}
+		{\scshape\LARGE Ashkalem Abenteuer \par}
+		\vspace{1cm}
+		{\huge\bfseries Die Feuerbringer \par}
+		\vspace{2cm}
+		{\Large\itshape by Xanaphia \par}
+		
+		\vfill
+		
+		% Bottom of the page
+		
+	\end{titlepage}
+	
+	\tableofcontents % creats a table of contents, ensured already that it is clickable
+	\newpage % starts the actual document on a new page so there is no weird colision of text and toc
+	
+	\chapter{Backstories}
+	
+	\section{Xanaphia Vitré}
+	
+	\section{Vaunoth}
+	
+	\section{Delphi}
+	
+	\section{Umbra}
+	
+	\chapter{Beschreibung}
+	
+	\chapter{Session 1}
+	Als ich durch die Straßen von Lintz durchwanderte, auf der Suche nach einer Möglichkeit nach Restel zu gelangen, sah ich wie eine Gruppe zunächst die widerlichen Gnome die meine vorherige Begleitung aus dem verkehr zogen, besiegte, und dann Probleme mit den Behörden hatten. Um mich bei ihnen zu bedanken und möglicherweise etwas leichter, näher an mein Ziel zu gelangen beschloss ich der Gruppe zu helfen. Die drei vor mir, ein verschlossener Kerl, einer der leicht zu überreden scheint und eine mir immer noch misstrauende Dame. Als dank durfte ich erstmals der Gruppe folgen. Als ich befragt wurde wo ich hin wollte gab ich ihnen die Stadt Viritrol, welche in der nähe liegt. -Man kann nie sicher genug sein, in der Hinsicht von wertvoller Information-
+	
+	Die ganze Stadt scheint sehr verunsichert da ein Dämon die Stadt plagt. Es wurde bisher sogar mindestens eine Dame verbrannt. 
+	
+	Nach einer kurzen runde durch die Stadt kamen wir im Fischersglück an. Dort schien Vaunoth einige zu kennen, doch wollte ihm keiner helfen. Selbst mit meiner Unterstützung ließ uns fast jeder kalt. Nur eine Mearin von Learin schien fast kooperativ zu sein. Doch für ihre Hilfe verlangt sie eine hohe summe an Gold, was wir nicht ausgeben wollen. -... Wo sind wir denn hier?-
+	
+	Auf der Suche nach weiteren Optionen begegnen wir eine verheulte Dame die in einen laden stürmt. Es scheint die Ladenbesitzerin zu sein. Wir gehen ihr nach um zu sehen was schief gelaufen ist. Scheinbar war es ihre Schwester Marget die verbrannt wurde. Sie soll den Dämon herbei geschworen haben welcher sämtliche Segler getötet hat. Da sie im Bordell gearbeitet hatte sollten wir dort vorbei schauen. Am Abend dürfen wir auch zurück in den Laden. -Nettes Mädchen- Da sie ihren Laden abschließen soll, um sicher vor anderen und dem Dämon zu sein brauchen wir ein Klopfzeichen. Wir haben und auf 1 mal stark, 4 mal leicht und wieder 1 mal stark geeinigt. -Vaunoth wollte zunächst nur einmal stark... scheint nicht das hellste Kerlchen zu sein... ist ja aber nichts neues, dass Männer wichtiges nicht entscheiden sollten.- 
+	
+	Am Bordell angekommen sahen wir, dass es zu hatten. Ein Notiz hing an der Tür auf dem stand, dass erst wieder aufgemacht wird, wenn der Tempel sie für Dämonen-frei erklärt. Unmittelbar darauf begab sich Vaunoth auf zum Tempel, der neben an steht. Delphi scheint ihm dicht auf den Fersen zu liegen. -Da hat jemand kapiert, dass ein Mann nicht selbstständig handeln kann.- Ich laufe hinterher, lasse mir jedoch Zeit. An einer Treppe wollte Umbra unbedingt einem Hilfeschrei nach schauen. Er meinte ich soll die anderen informieren und wenn er nicht kurz darauf uns eingeholt hat, auch nach ihm zu schauen. An der spitze wo Vaunoth und Delphi mit einem Priester des Tempels sprachen angekommen kamen wir alle schnell auf den Entschluss Umbra und dem Hilfeschrei zu helfen. 
+	
+	Es brach ein Kampf mit einer Riesen Krabbe aus. Als Panzerung hatte sie etwas sehr ungewöhnliches an, einen Drachenkopf. 
+	
+	Als der Kampf endete bat uns der gerettete, Felix, zu sich ins Zimmer um mit ihm über die Dämonen Sache zu reden. Um sicher zu gehen, dass Felix uns auch wirklich vertraut hab ich ein paar seiner Mäntel gereinigt. In der Zwischenzeit entwickelten wir einen Plan den Dämon zu erlegen. Felix soll als Köder in der Nacht durch die Stadt laufen. Sobald der Dämon raus kommt werden wir 4 ihn erlegen. -Delphi hatte scheinbar keine oder nur wenige Probleme, dass ich jetzt dabei bin. Vielleicht löst sich ihr misstrauen ja doch noch.-
+	
+	Nachdem der Plan durchgesprochen wurde, baten wir Felix um "Hilfe" um das Bordell wieder zu eröffnen, da sie ja wegen der Dämonen Herkunft sehr verunsichert waren. Da ihm nichts besseres einfiel gab er uns einen Zettel auf dem drauf stand, dass jenes Gebäude Dämonen frei ist. Mit diesem Zettel begaben wir uns zum Bordell. Dank des Zettels wurden wir auch rein gelassen und die Sicht war kaum zu fassen.
+	
+	\chapter{Session 2}
+	Der erste Anblick war erstaunlich, sämtliche Frauen die alle in jeglicher Hinsicht jedem Mann überlegen waren. Im Aussehen, ihre Ausstrahlung, ihren Reiz -... doch Moment mal. Hier stimmt doch was nicht, so toll Frauen sind, eine Art Beziehung ist unsinnig, niemanden zum Kontrollieren. Hier stimmt etwas nicht.- Bei genauerem hinschauen war klar, hier wird Magie verwendet um dinge "besser" aussehen zu lassen als sie eigentlich sind. 
+	
+	Wir wurden an einen Tisch gebeten wo wir mit dem Inhaber etwas über Marget reden wollten. Viel haben wir nicht erfahren, doch er versuchte auf unsere gute Seite zu kommen indem er komisches Wasser verzauberte um nach gutem Tee schmecken zu lassen. -Man kann nie vorsichtig genug sein, ich hab nichts getrunken.- Nach einiger Zeit erfuhren wir, dass Marget Sämtliche Ketten und Schmuck von einem der Dämonen Opfer geschenkt bekommen hatte (Glan). Diesen Schmuck wollte ich mitnehmen und der armen Kete geben, damit sie ihre Schwester nicht ganz verliert. -Doch ich bin mir selber auf die Zehen getreten und jetzt müssen wir den Schmuck zurück bringen... wollen wir doch mal sehen.- Vom Inhaber erfuhren wir auch, dass ein Zwerg namens Vragnar, Gerüchte über uns in die Welt setzen wollte. -Natürlich weiß er nicht wo dieser Zwerg Wohnt... Typisch Männer... Können alles nur nichts richtig. Mal schauen wo wir hiermit hin kommen.- 
+	
+	Mit dieser Information bewaffnet wollten wir zu Kete und sie befragen ob sie etwas über diesen Zwerg weiß. 
+	
+	Als wir in den Block von Kete's Laden ankamen war klar, dass etwas nicht stimmte. Im Laden scheint eingebrochen worden zu sein. 
+	
+\end{document}
