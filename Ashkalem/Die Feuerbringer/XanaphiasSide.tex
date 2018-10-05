@@ -1,4 +1,4 @@
-\documentclass[10pt,twoside,twocolumn,openany]{book}
+\documentclass[10pt,twoside,openany]{book}
 
 % The following packages were required to make the dnd.sty work
 \usepackage[table]{xcolor}
@@ -14,7 +14,7 @@
 \usepackage{everypage}
 \usepackage{listings}
 
-\usepackage[bg-letter]{dnd} % Options: bg-a4, bg-letter, bg-full, bg-print, bg-none.
+\usepackage{dnd} % Options: bg-a4, bg-letter, bg-full, bg-print, bg-none.
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc} % this way umlaute are included from the get go
@@ -29,8 +29,8 @@
 \usepackage{hyperref} % these two lines are so that the table of content is clickable
 \hypersetup{linktoc=all}
 \usepackage{tikz}
-\usepackage[protrusion=true,expansion=true]{microtype}
-\usetikzlibrary{positioning,shapes,shadows,arrows,backgrounds,fit}
+%\usepackage[protrusion=true,expansion=true]{microtype}
+%\usetikzlibrary{positioning,shapes,shadows,arrows,backgrounds,fit}
 
 %\setlength{\parindent}{0pt}
 
@@ -62,7 +62,7 @@
 
 \begin{document}
 	\tikzstyle{textstyle}=[rectangle, text width=6cm, text badly ragged, scale=0.8]
-	\begin{titlepage} % good tital page template, only needs the class X notes part to be changed for each new class
+	%\begin{titlepage} % good tital page template, only needs the class X notes part to be changed for each new class
 		
 		\centering
 		\includegraphics[width=1\textwidth]{AshkalemLogo}\par\vspace{1cm}
@@ -76,14 +76,15 @@
 		
 		% Bottom of the page
 		
-	\end{titlepage}
-	
+	%\end{titlepage}
+	\twocolumn
 	\tableofcontents % creats a table of contents, ensured already that it is clickable
 	\newpage % starts the actual document on a new page so there is no weird colision of text and toc
 	
 	\chapter{Backstories}
 	
 	\section{Xanaphia Vitré}
+	\input{Xanaphia}
 	
 	\section{Vaunoth}
 	
